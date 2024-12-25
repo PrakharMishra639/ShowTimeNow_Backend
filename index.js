@@ -1,9 +1,12 @@
 const express = require('express');
 const app = express();
 
+require('dotenv').config();
+
+
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const PORT = 8000;
+const PORT = process.env.PORT||8001;
 const cookieParser = require('cookie-parser');
 const authRoutes = require('./Routes/Auth');
 const adminRoutes = require('./Routes/Admin');
