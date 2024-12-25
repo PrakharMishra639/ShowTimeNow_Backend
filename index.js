@@ -1,13 +1,11 @@
 const express = require('express');
 const app = express();
 
-require('dotenv').config();
-
-
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const PORT = process.env.PORT||8001;
+const PORT = 8000;
 const cookieParser = require('cookie-parser');
+
 const authRoutes = require('./Routes/Auth');
 const adminRoutes = require('./Routes/Admin');
 const movieRoutes = require('./Routes/Movie');
@@ -16,8 +14,10 @@ const imageuploadRoutes = require('./Routes/imageUploadRoutes');
 
 require('dotenv').config();
 require('./db')
+
+
 app.use(bodyParser.json());
-const allowedOrigins = ['http://localhost:3000','http://localhost:3001','http://localhost:3002']; // Add more origins as needed
+const allowedOrigins = ['http://localhost:3000','http://localhost:3001']; // Add more origins as needed
 app.use(
     cors({
         origin: function (origin, callback) {
@@ -31,6 +31,7 @@ app.use(
     })
 );
 app.use(cookieParser());
+
 app.use('/auth', authRoutes);
 app.use('/admin', adminRoutes);
 app.use('/movie', movieRoutes);
@@ -39,7 +40,6 @@ app.use('/image', imageuploadRoutes);
 app.get('/', (req, res) => {
     res.json({ message: 'The API is working' });
 });
-
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
