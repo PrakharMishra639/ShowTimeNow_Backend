@@ -1,11 +1,15 @@
 {
   "name": "moviebooking_backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Movie Booking Backend",
   "main": "index.js",
   "scripts": {
-  "start": "nodemon index.js"
-},
+    "start": "node index.js",
+    "build": "npm install --unsafe-perm"
+  },
+  "engines": {
+    "node": ">=16.x"
+  },
   "dependencies": {
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
@@ -18,9 +22,8 @@
     "mongoose": "^7.5.1",
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.5",
-    "nodemon": "^3.0.1",
     "sharp": "^0.32.5"
   },
-  "author": "",
+  "author": "Prakhar Mishra",
   "license": "ISC"
 }
