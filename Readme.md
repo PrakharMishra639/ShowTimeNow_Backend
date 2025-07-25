@@ -82,12 +82,14 @@ Visit: [http://localhost:3000](http://localhost:3000)
 
 ## Routes & Endpoints
 
-**Auth**  
+**Auth**
+
 `POST /api/auth/register `– Register a new user
 
 `POST /api/auth/login` – Login user/admin
 
 **Movie Routes**
+
 `POST /api/movies` – Add a new movie (admin)
 
 `GET /api/movies` – Get all movies
@@ -95,19 +97,23 @@ Visit: [http://localhost:3000](http://localhost:3000)
 `GET /api/movies/:id` – Get a movie by ID
 
 **Theatre Routes**
+
 `POST /api/theatres` – Add a theatre
 
 `GET /api/theatres` – Get all theatres
 
 **City Routes**
+
 `GET /api/cities` – List of supported cities
 
 **Booking Routes**
+
 `POST /api/bookings` – Book tickets
 
 `GET /api/bookings/:userId` – View user’s bookings
 
 **Upload Routes**
+
 `POST /api/upload` – Upload movie images or posters to Cloudinary
 
 ## 👨‍💻 Author
